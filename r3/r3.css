@@ -7,7 +7,7 @@ body {
   font-family: Inter;
 }
 h1 {
-  font-size: 32px;
+  font-size: 2rem;
   margin-bottom: 0;
 }
 .video-container {
@@ -71,7 +71,7 @@ video {
 }
 .modal-window-open button {
   background-color: white;
-  box-shadow: gray -5px 0px 12px;
+  box-shadow: gray 0px 0px 12px;
   width: 7rem;
   height: 3rem;
   border-radius: 3px;
