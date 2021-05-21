@@ -8,6 +8,7 @@
     <meta name="description" content="An example page with a video on a modal window">
     <meta name="keywords" content="Example page, code challenge, code practice, jr developer, modal window, landascape">
     <title>R3</title>
+    <!-- Icono de la web -->
     <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./r3.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
@@ -15,24 +16,34 @@
 </head>
 
 <body>
+    <!-- Section que contiene la imagen y el boton -->
     <section class="video-container">
-        <button class="button">
+        <!-- Boton que llama a la funcion para abrir la ventana modal -->
+        <button onclick="openModal()" class="button">
+            <!-- Icono de play contenido dentro del boton -->
             <i title="play button" class="fas fa-play-circle"></i>
         </button>
-        <img title="landscape image" loading="lazy" src="./images/mountain.jpg" alt="landascape">
+        <!-- Imagen con atributo lazy, que hace que solo se cargue si el usuario la visualiza, ahorrando recursos. Atributos alt y title para mayor accesibilidad -->
+        <img title="landscape image" loading="lazy" src="./images/mountain.jpg" alt="A mountain landascape">
     </section>
+    <!-- Section contenedor de caja de cotenido-->
     <section class="text-container">
-        <section class="text-content">
+        <!-- article contenedor de  texto -->
+        <article class="text-content">
             <h1>Give the world the answer they need, become a Supernatural Partner today.</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nihil ratione natus id veniam earum
                 quae debitis, sapiente modi totam officia sed ea neque voluptas alias dolore commodi odit quas Lorem
                 ipsum dolor sit amet consectetur, adipisicing elit. Perferendis earum ipsam aut, quasi ea saepe
                 molestiae impedit facilis hic iusto animi alias consequatur tempora commodi quos. Nesciunt distinctio
                 nulla earum.</p>
-        </section>
-        <section class="modal-window">
-            adadad
-        </section>
+        </article>
+    </section>
+    <!-- Section Contenedor de la ventana modal. Tiene la clase cerrada que luego será cambiada para que esta sea mostrada -->
+    <section id="modal-window" class="modal-window-closed">
+        <!-- Atributo muted para que el video no arranque con sonido. Controls para que se muestren los controles de repoduccion -->
+        <video muted loading="lazy" controls title="Video of New Zeland's landscapes" src="./images/video.mp4"></video>
+        <!-- Boton close que cambia la clase del section contenedor para que esta se oculte nuevamente. Lo realiza mediante el evento onclick, el cual llama a la funcion closeModal() -->
+        <button title="close button" class="modalButton" onclick="closeModal()">Close</button>
     </section>
     <script src="./r3.js"></script>
 </body>
